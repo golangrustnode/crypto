@@ -12,6 +12,15 @@ import (
 	"errors"
 )
 
+/*
+   1.检查私钥格式是否正确
+       openssl rsa -in private.key -check
+   2.用私钥生成公钥
+       openssl rsa -in private.key -outform pem -pubout -out public.pem
+   3. 生成私钥
+   openssl genrsa -out private.pem 2048
+ */
+
 func SignWithRsa2(privateKey *rsa.PrivateKey, message []byte) ([]byte, error) {
 	hashed := sha256.Sum256(message)
 	return rsa.SignPKCS1v15(rand.Reader, privateKey, crypto.SHA256, hashed[:])
