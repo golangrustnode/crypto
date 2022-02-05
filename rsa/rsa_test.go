@@ -2,8 +2,6 @@ package rsa
 
 import (
 	"crypto/rsa"
-	"encoding/base64"
-	"encoding/hex"
 	"fmt"
 	log "github.com/sirupsen/logrus"
 	"reflect"
@@ -35,9 +33,9 @@ func TestGeneraRsa2Key(t *testing.T) {
 	log.Info(pub.N.String())
 	msg := []byte("hello world")
 	sig,_ := SignWithRsa2(priv,msg)
-	log.Info(hex.EncodeToString(sig))
-	fmt.Println("sig base64 length:",len(base64.StdEncoding.EncodeToString(sig))," byte length",len(sig))
-	err = VerifyWithRsa2(pub,msg,hex.EncodeToString(sig))
+	log.Info(sig)
+	fmt.Println("sig base64 length:",len(sig)," byte length",len(sig))
+	err = VerifyWithRsa2(pub,msg,sig)
 	log.Info(err)
 }
 
@@ -130,9 +128,9 @@ uwIDAQAB
 	}
 	msg := []byte("hello world")
 	sig,_ := SignWithRsa2(priv,msg)
-	log.Info(hex.EncodeToString(sig))
-	fmt.Println("sig base64 length:",len(base64.StdEncoding.EncodeToString(sig))," byte length",len(sig))
-	err = VerifyWithRsa2(pub,msg,hex.EncodeToString(sig))
+	log.Info(sig)
+	fmt.Println("sig base64 length:",len(sig)," byte length",len(sig))
+	err = VerifyWithRsa2(pub,msg,sig)
 	log.Info(err)
 
 }

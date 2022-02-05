@@ -1,7 +1,12 @@
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
+github.com/golangrustnode/struct2str v0.0.0-20220202081139-fb888b1af83f h1:2iWG2FS7reiIgzzAkXuNMfyx6Gbq6BVueYE6qZjYscc=
+github.com/golangrustnode/struct2str v0.0.0-20220202081139-fb888b1af83f/go.mod h1:t45vLAH4KHuZq3A9Ai3nYl2f4G1Avg71BHmvdK/3Y8k=
+github.com/luckydog8686/logs v0.0.0-20210131112525-882190a54f4d h1:u1bUin7z3wrkpypI9q2PojDrQp9hoHF0K8kVxMIb2UY=
+github.com/luckydog8686/logs v0.0.0-20210131112525-882190a54f4d/go.mod h1:OqpuF1rqEprpGiT9VDICFqKtQbJBnHNZtrqwEsHrdOA=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
+github.com/sirupsen/logrus v1.7.0/go.mod h1:yWOB1SBYBC5VeMP7gHvWumXLIWorT60ONWic61uBYv0=
 github.com/sirupsen/logrus v1.8.1 h1:dJKuHgqk1NNQlqoA6BTlM1Wf9DOH3NBjQyu0h9+AZZE=
 github.com/sirupsen/logrus v1.8.1/go.mod h1:yWOB1SBYBC5VeMP7gHvWumXLIWorT60ONWic61uBYv0=
 github.com/stretchr/testify v1.2.2 h1:bSDNvY7ZPG5RlJ8otE/7V6gMiyenm9RtJ7IUVIAoJ1w=

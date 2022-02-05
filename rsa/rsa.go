@@ -21,9 +21,13 @@ import (
    openssl genrsa -out private.pem 2048
  */
 
-func SignWithRsa2(privateKey *rsa.PrivateKey, message []byte) ([]byte, error) {
+func SignWithRsa2(privateKey *rsa.PrivateKey, message []byte) (string, error) {
 	hashed := sha256.Sum256(message)
-	return rsa.SignPKCS1v15(rand.Reader, privateKey, crypto.SHA256, hashed[:])
+	sig,err:= rsa.SignPKCS1v15(rand.Reader, privateKey, crypto.SHA256, hashed[:])
+	if err != nil {
+		return "",err
+	}
+	return hex.EncodeToString(sig),nil
 }
 
 func VerifyWithRsa2(pub *rsa.PublicKey, message []byte, signature string) error {
